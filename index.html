@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Israel Alkimim | Engenheiro de Software Full Stack & Mobile</title>
+  
+  <!-- Meta tags SEO -->
+  <meta name="description" content="Portfólio de Israel Alkimim - Desenvolvedor Full Stack & Mobile especializado em Laravel, Node.js, React, React Native, TypeScript, TailwindCSS e Soluções Escaláveis." />
+  <meta property="og:title" content="Israel Alkimim | Engenheiro de Software Full Stack & Mobile" />
+  <meta property="og:description" content="Conheça os cases reais: Cidadão Inteligente (GovTech), NNewtractor, Plataforma Mão Amiga e mais." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              purple: '#9d4edd',
+              violet: '#7928ca',
+              dark: '#070a13',
+              darker: '#03050a',
+              card: 'rgba(17, 24, 39, 0.7)',
+              border: 'rgba(255, 255, 255, 0.08)'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          animation: {
+            'glow-pulse': 'glow 4s ease-in-out infinite alternate',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            glow: {
+              '0%': { opacity: '0.3', transform: 'scale(1)' },
+              '100%': { opacity: '0.6', transform: 'scale(1.08)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #050811;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+    
+    /* Neon glow & Glassmorphism styles */
+    .glass-card {
+      background: rgba(13, 19, 33, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 242, 254, 0.35);
+      box-shadow: 0 10px 30px -10px rgba(0, 242, 254, 0.15);
+      transform: translateY(-4px);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #9d4edd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .gradient-text-warm {
+      background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070a13;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f293d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00f2fe;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-500 selection:text-black">
+
+  <!-- Background Ambient Glow Blobs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-[140px] animate-glow-pulse"></div>
+    <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[160px] animate-glow-pulse" style="animation-delay: 2s;"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[450px] h-[450px] bg-blue-600/20 rounded-full blur-[150px] animate-glow-pulse" style="animation-delay: 1s;"></div>
+    <!-- Subtle Grid Overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293d12_1px,transparent_1px),linear-gradient(to_bottom,#1f293d12_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 backdrop-blur-md bg-brand-darker/70 border-b border-white/5">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-400 to-purple-600 p-[2px] transition-transform group-hover:scale-105">
+          <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center font-mono font-bold text-cyan-400 text-lg">
+            IA
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-base tracking-tight text-white group-hover:text-cyan-400 transition-colors">Israel Alkimim</span>
+          <span class="text-[11px] font-mono text-gray-400 tracking-wider">FULL STACK & MOBILE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+        <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+        <a href="#projetos" class="hover:text-cyan-400 transition-colors">Cases de Sucesso</a>
+        <a href="#habilidades" class="hover:text-cyan-400 transition-colors">Stack Tecnológica</a>
+        <a href="#contato" class="hover:text-cyan-400 transition-colors">Contato</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5511999999999?text=Olá%20Israel,%20vi%20seu%20portfólio%20no%20GitHub!" target="_blank" 
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Vamos Conversar</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 pt-28 pb-20 px-6 max-w-7xl mx-auto">
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="min-h-[85vh] flex flex-col justify-center items-center text-center py-12">
+      
+      <!-- Availability Pill -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card text-xs font-medium text-gray-300 mb-8 border border-cyan-500/30 badge-glow">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>Disponível para novos projetos, contratação & consultoria</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-5xl leading-[1.15] mb-6">
+        Transformando Ideias em <br class="hidden sm:inline" />
+        <span class="gradient-text">Software de Alto Impacto</span> & Escalável
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl text-gray-400 max-w-3xl leading-relaxed mb-10 font-normal">
+        Arquiteto de Soluções e Desenvolvedor Full Stack & Mobile. Do ecossistema municipal <strong class="text-white">GovTech</strong> a <strong class="text-white">Marketplaces B2B/B2C</strong> de grande porte com milhões em transações.
+      </p>
+
+      <!-- Key Techs Badges Line -->
+      <div class="flex flex-wrap items-center justify-center gap-2 max-w-2xl mb-10">
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-red-500/10 text-red-400 border border-red-500/20">Laravel 11</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">PHP 8+</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-green-500/10 text-green-400 border border-green-500/20">Node.js</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">TypeScript</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">React & React Native</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20">TailwindCSS</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20">Docker</span>
+        <span class="px-3 py-1 text-xs font-mono rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">MySQL & PostgreSQL</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#projetos" class="px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-black hover:opacity-90 transition-all flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+          <span>Explorar Cases Reais</span>
+          <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+        <a href="https://github.com/israelalkimim" target="_blank" class="px-7 py-3.5 rounded-xl font-semibold glass-card text-white hover:bg-white/10 transition-all flex items-center gap-2">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Profile</span>
+        </a>
+      </div>
+
+      <!-- Metrics Row -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-12 mt-20 pt-10 border-t border-white/10 w-full max-w-4xl">
+        <div class="flex flex-col items-center">
+          <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono">5+</span>
+          <span class="text-xs text-gray-400 uppercase tracking-wider mt-1">Produtos em Produção</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl sm:text-4xl font-extrabold text-cyan-400 font-mono">100%</span>
+          <span class="text-xs text-gray-400 uppercase tracking-wider mt-1">Full Stack & Mobile</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl sm:text-4xl font-extrabold text-purple-400 font-mono">GovTech</span>
+          <span class="text-xs text-gray-400 uppercase tracking-wider mt-1">Impacto Municipal</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono">End-to-End</span>
+          <span class="text-xs text-gray-400 uppercase tracking-wider mt-1">Arquitetura & Deploy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CASES & PROJETOS -->
+    <section id="projetos" class="py-20 scroll-mt-20">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-widest mb-3">
+            <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+            Portfólio em Produção
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Projetos & Cases de Alto Impacto</h2>
+          <p class="text-gray-400 mt-2 max-w-xl text-sm sm:text-base">Aplicações reais com valor mensurável de mercado, regras de negócio complexas e arquitetura moderna.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 p-1.5 glass-card rounded-2xl border border-white/10 self-start md:self-auto" id="filter-container">
+          <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-cyan-500 text-black shadow-md" data-filter="all">Todos</button>
+          <button onclick="filterProjects('gov')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-white transition-all" data-filter="gov">🏛️ GovTech</button>
+          <button onclick="filterProjects('market')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-white transition-all" data-filter="market">🛒 Marketplaces</button>
+          <button onclick="filterProjects('web')" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-white transition-all" data-filter="web">🔮 Web & Clientes</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8" id="projects-grid">
+        
+        <!-- CASE 1: CIDADÃO INTELIGENTE (FEATURED BIG CARD) -->
+        <div class="project-item lg:col-span-12 glass-card rounded-3xl p-8 sm:p-10 relative overflow-hidden border border-cyan-500/20 group hover:border-cyan-500/40" data-category="gov">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-cyan-500/20 transition-all"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 space-y-5">
+              <div class="flex flex-wrap items-center gap-2.5">
+                <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-cyan-500/15 text-cyan-300 border border-cyan-500/30">GovTech & Smart Cities</span>
+                <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Prefeitura de Itapecerica da Serra</span>
+                <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30">Fase Final de Aval</span>
+              </div>
+
+              <h3 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">Cidadão Inteligente (Intelitap)</h3>
+              
+              <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                Plataforma digital integrada (Web e Aplicativo Mobile nativo) desenvolvida para modernizar a prestação de serviços públicos municipais. Permite que cidadãos registrem solicitações de zeladoria com geolocalização exata e fotos, façam agendamentos de atendimentos e interajam com a ouvidoria em tempo real.
+              </p>
+
+              <!-- Technical Highlights -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-gray-300">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Painel Web Administrativo + App Mobile</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Triagem inteligente de demandas urbanas</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Georreferenciamento e notificações push</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+                  <span>Segurança LGPD & Autenticação Cidadã</span>
+                </div>
+              </div>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">React Native (Expo)</span>
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Node.js & Express</span>
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TypeScript</span>
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">PostgreSQL</span>
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TailwindCSS</span>
+                <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Docker</span>
+              </div>
+
+              <div class="pt-4 flex flex-wrap items-center gap-4">
+                <button onclick="openModal('cidadao')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition-all flex items-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                  <span>Ver Detalhes & Arquitetura</span>
+                </button>
+                <a href="https://github.com/israelalkimim/app-cidadao-intelitap" target="_blank" class="px-5 py-2.5 rounded-xl text-xs font-semibold glass-card text-white hover:bg-white/10 transition-all flex items-center gap-2">
+                  <i data-lucide="github" class="w-4 h-4"></i>
+                  <span>Repositório GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Graphic Preview Visual -->
+            <div class="lg:col-span-5 bg-brand-dark/90 rounded-2xl p-6 border border-white/10 relative shadow-2xl flex flex-col justify-center items-center text-center">
+              <div class="w-16 h-16 rounded-2xl bg-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4">
+                <i data-lucide="landmark" class="w-8 h-8"></i>
+              </div>
+              <h4 class="text-lg font-bold text-white mb-2">GovTech em Produção</h4>
+              <p class="text-xs text-gray-400 max-w-xs mb-6">Módulos de Cidadania, Zeladoria Urbana, Saúde e Gestão Municipal unificados em uma única infraestrutura segura.</p>
+              
+              <div class="w-full bg-white/5 rounded-xl p-4 border border-white/5 space-y-2 text-left font-mono text-xs">
+                <div class="flex justify-between text-gray-400">
+                  <span>Target:</span>
+                  <span class="text-cyan-300">Itapecerica da Serra - SP</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Plataformas:</span>
+                  <span class="text-white">Web & Mobile (Android/iOS)</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                  <span>Status:</span>
+                  <span class="text-emerald-400">Pronto para Validação Executiva</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE 2: NNEWTRACTOR -->
+        <div class="project-item lg:col-span-6 glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between" data-category="market">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">AgriTech & Marketplace</span>
+              <span class="text-xs font-mono text-gray-400">Cliente Real</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">NNewtractor Marketplace & App</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Plataforma de alta volumetria para compra, venda e locação de maquinário pesado, implementos agrícolas e tratores. Conta com gestão de inventário, pesquisa parametrizada por marca/ano/horímetro e integração com gateway Mercado Pago.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">PHP 8 / Laravel</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TailwindCSS</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">MySQL</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Mercado Pago API</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Mobile App</span>
+            </div>
+          </div>
+
+          <div class="pt-8 flex items-center justify-between border-t border-white/10 mt-6">
+            <button onclick="openModal('nnewtractor')" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              <span>Especificações Técnicas</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="https://github.com/israelalkimim/nnewtractor-marketplace" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CASE 3: PLATAFORMA MÃO AMIGA -->
+        <div class="project-item lg:col-span-6 glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between" data-category="market">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30">Services Marketplace</span>
+              <span class="text-xs font-mono text-gray-400">Projeto Próprio</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">Plataforma Mão Amiga (Web & App)</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Ecossistema para intermediação confiável entre clientes e profissionais autônomos. Desenvolvido com backend desacoplado em TypeScript, interface web intuitiva e aplicativo móvel React Native com APK funcional para Android.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Node.js / Express</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TypeScript</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">React Native / Expo</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TailwindCSS</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">MySQL</span>
+            </div>
+          </div>
+
+          <div class="pt-8 flex items-center justify-between border-t border-white/10 mt-6">
+            <button onclick="openModal('maoamiga')" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              <span>Especificações Técnicas</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="https://github.com/israelalkimim/plataforma-mao-amiga" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CASE 4: DREPADILHA.COM.BR -->
+        <div class="project-item lg:col-span-6 glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between" data-category="web">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30">E-Commerce de Serviços</span>
+              <span class="text-xs font-mono text-gray-400">Cliente Real</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">Drepadilha.com.br (Portal Místico)</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Plataforma para atendimentos e serviços de tarologia com agendamentos automatizados, sistema de pagamentos, gestão de clientes e arquitetura robusta construída em Laravel 11 com Vite e TypeScript.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Laravel 11</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TypeScript</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TailwindCSS</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Vite</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">MySQL</span>
+            </div>
+          </div>
+
+          <div class="pt-8 flex items-center justify-between border-t border-white/10 mt-6">
+            <button onclick="openModal('drepadilha')" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              <span>Especificações Técnicas</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="https://github.com/israelalkimim/drepadilha-portal-mistico" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CASE 5: LUZ DO UNIVERSO -->
+        <div class="project-item lg:col-span-6 glass-card rounded-3xl p-8 relative overflow-hidden flex flex-col justify-between" data-category="web">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 text-[11px] font-mono uppercase tracking-wider rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Saúde & Terceira Idade</span>
+              <span class="text-xs font-mono text-gray-400">Cliente Real</span>
+            </div>
+
+            <h3 class="text-2xl font-bold text-white">Lar de Idosos Luz do Universo</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Solução web institucional de alta performance e sensibilidade para casa de repouso e cuidados com idosos. Foco rigoroso em acessibilidade, tempo de carregamento ultrarrápido, apresentação dos planos de acolhimento e SEO.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Laravel 11</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">TailwindCSS v4</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Alpine.js</span>
+              <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 border border-white/10 text-gray-300">Vite</span>
+            </div>
+          </div>
+
+          <div class="pt-8 flex items-center justify-between border-t border-white/10 mt-6">
+            <button onclick="openModal('luzdouniverso')" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+              <span>Especificações Técnicas</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <a href="https://github.com/israelalkimim/luz-do-universo" target="_blank" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: HABILIDADES / TECH STACK -->
+    <section id="habilidades" class="py-20 border-t border-white/10 scroll-mt-20">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Tecnologias & Ferramentas</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2">Stack de Engenharia</h2>
+        <p class="text-gray-400 mt-4 text-sm sm:text-base">Dominando as ferramentas modernas mais exigidas pelo mercado de tecnologia para entregar código limpo e arquitetura resiliente.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- CARD: BACKEND & APIS -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400">
+              <i data-lucide="server" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">Backend & APIs</h3>
+              <p class="text-xs text-gray-400">Serviços escaláveis e seguros</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Arquitetura MVC, RESTful APIs, injeção de dependências, filas e microsserviços.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">PHP 8+</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Laravel 11</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Node.js</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Express.js</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">TypeScript</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Python</span>
+          </div>
+        </div>
+
+        <!-- CARD: FRONTEND WEB -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+              <i data-lucide="layout" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">Frontend Web & UX</h3>
+              <p class="text-xs text-gray-400">Interfaces modernas e reativas</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Componentização com alta fidelidade visual, acessibilidade, performance e SEO.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">React 18/19</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Vue.js</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">TailwindCSS v3 & v4</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Vite</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Alpine.js</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">HTML5 / CSS3</span>
+          </div>
+        </div>
+
+        <!-- CARD: MOBILE DEVELOPMENT -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+              <i data-lucide="smartphone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">Mobile Development</h3>
+              <p class="text-xs text-gray-400">Apps nativos e cross-platform</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Desenvolvimento mobile de alto rendimento com geração de APKs, bundles e deploy.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">React Native</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Expo Application Framework</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Android (APK / AAB)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">iOS Ready</span>
+          </div>
+        </div>
+
+        <!-- CARD: BANCO DE DADOS -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">Bancos de Dados</h3>
+              <p class="text-xs text-gray-400">Modelagem, integridade & cache</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Modelagem relacional com diagramas E-R, queries otimizadas, transações ACID e ORMs.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">MySQL</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">PostgreSQL</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Redis</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Prisma ORM</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Eloquent</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">DBeaver</span>
+          </div>
+        </div>
+
+        <!-- CARD: DEVOPS & INFRA -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">DevOps & Cloud</h3>
+              <p class="text-xs text-gray-400">Ambientes de produção e deploy</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Contêineres, servidores Linux VPS, Nginx reverse proxy, automações de deploy CI/CD.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Docker</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Linux VPS</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Nginx</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Apache</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Git & GitHub</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">SSH & Bash</span>
+          </div>
+        </div>
+
+        <!-- CARD: INTEGRAÇÕES & NEGÓCIO -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400">
+              <i data-lucide="credit-card" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white">FinTech & Integrações</h3>
+              <p class="text-xs text-gray-400">Monetização e serviços de terceiros</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed">
+            Gateways de pagamento, webhooks, envio de e-mails transacionais e autenticação OAuth.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Mercado Pago API</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">Pix & Webhooks</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">SMTP / Mailgun</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-white/5 text-gray-300 font-mono">JWT & Auth</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SOBRE MIM -->
+    <section id="sobre" class="py-20 border-t border-white/10 scroll-mt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="relative w-full max-w-sm mx-auto">
+            <div class="w-full aspect-square rounded-3xl bg-gradient-to-tr from-cyan-500 via-purple-600 to-blue-500 p-[2px]">
+              <div class="w-full h-full bg-brand-dark rounded-[22px] flex flex-col justify-center items-center p-8 text-center">
+                <div class="w-24 h-24 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center font-mono text-3xl font-bold text-black mb-4">
+                  IA
+                </div>
+                <h3 class="text-2xl font-bold text-white">Israel Alkimim</h3>
+                <p class="text-xs font-mono text-cyan-400 mt-1">Full Stack & Mobile Engineer</p>
+                <div class="w-full border-t border-white/10 my-4"></div>
+                <p class="text-xs text-gray-400">
+                  São Paulo, Brasil • Foco em Soluções Escaláveis, GovTech & Marketplaces
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Trajetória & Valores</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+            Engenharia focada na resolução real de problemas de negócio.
+          </h2>
+          <p class="text-gray-300 leading-relaxed">
+            Com uma formação sólida e contínua em engenharia e desenvolvimento de software, atuo construindo sistemas completos: desde o primeiro esboço do modelo de dados até o deploy em produção e a compilação de aplicativos para o usuário final.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Minha experiência prática inclui liderança no desenvolvimento de ecossistemas com alta exigência de segurança e compliance (como o <strong>Cidadão Inteligente</strong> para órgãos públicos municipais) e plataformas de comércio com pagamentos integrados em tempo real (como o <strong>NNewtractor</strong> e a <strong>Plataforma Mão Amiga</strong>).
+          </p>
+          <div class="pt-2 flex flex-wrap gap-4">
+            <a href="https://linkedin.com/in/israel-alkimim" target="_blank" class="px-6 py-3 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white transition-all flex items-center gap-2">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+              <span>Perfil Completo no LinkedIn</span>
+            </a>
+            <a href="https://github.com/israelalkimim" target="_blank" class="px-6 py-3 rounded-xl text-xs font-semibold glass-card text-white hover:border-cyan-400/50 transition-all flex items-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>Repositórios Públicos</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CONTATO / CTA FINAL -->
+    <section id="contato" class="py-20 border-t border-white/10 scroll-mt-20 text-center">
+      <div class="max-w-4xl mx-auto glass-card rounded-3xl p-10 sm:p-16 border border-cyan-500/30 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 to-transparent pointer-events-none"></div>
+
+        <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest">Pronto para dar o próximo passo?</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-3 mb-6">
+          Vamos construir algo extraordinário juntos?
+        </h2>
+        <p class="text-gray-300 max-w-2xl mx-auto mb-10 text-sm sm:text-base leading-relaxed">
+          Estou disponível para contratação como desenvolvedor Full Stack / Mobile, projetos sob medida e parcerias estratégicas. Envie uma mensagem e receba retorno direto.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://wa.me/5511999999999?text=Olá%20Israel,%20gostei%20do%20seu%20portfólio%20e%20gostaria%20de%20conversar!" target="_blank" 
+             class="px-8 py-4 rounded-xl text-sm font-bold bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all flex items-center gap-2">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            <span>Conversar no WhatsApp</span>
+          </a>
+
+          <a href="mailto:israelalkimim@gmail.com" 
+             class="px-8 py-4 rounded-xl text-sm font-bold glass-card text-white hover:bg-white/10 transition-all flex items-center gap-2">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+            <span>israelalkimim@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DINÂMICO DE PROJETOS -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md">
+    <div class="glass-card max-w-3xl w-full rounded-3xl p-6 sm:p-10 border border-cyan-500/30 max-h-[90vh] overflow-y-auto relative animate-in fade-in zoom-in duration-200">
+      <button onclick="closeModal()" class="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div id="modal-content">
+        <!-- Injetado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/5 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Israel Alkimim. Todos os direitos reservados.</p>
+      <p class="font-mono text-[11px] text-gray-400">
+        Desenvolvido com <span class="text-cyan-400">TailwindCSS</span> & <span class="text-purple-400">TypeScript</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts Interativos -->
+  <script>
+    // Inicializa ícones Lucide
+    lucide.createIcons();
+
+    // Filtro de Projetos
+    function filterProjects(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.add('bg-cyan-500', 'text-black', 'shadow-md');
+          btn.classList.remove('text-gray-300');
+        } else {
+          btn.classList.remove('bg-cyan-500', 'text-black', 'shadow-md');
+          btn.classList.add('text-gray-300');
+        }
+      });
+
+      const items = document.querySelectorAll('.project-item');
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Dados dos Modais
+    const modalData = {
+      cidadao: {
+        title: "Cidadão Inteligente (Intelitap)",
+        badge: "GovTech & Smart Cities",
+        subtitle: "Prefeitura de Itapecerica da Serra - SP",
+        description: "O projeto Cidadão Inteligente é um sistema integrado completo concebido para ser a ponte digital definitiva entre a prefeitura municipal e os munícipes. O aplicativo permite registro e triagem de ocorrências de zeladoria (como iluminação pública, recapeamento e limpeza) com fotos e geolocalização exata, agendamentos presenciais para serviços de saúde e cidadania, além de canal direto com a ouvidoria.",
+        techs: ["React Native (Expo)", "Node.js (Express)", "TypeScript", "PostgreSQL", "TailwindCSS", "Docker", "Nginx"],
+        highlights: [
+          "Arquitetura escalável com separação estrita de camadas (Backend REST API, Frontend Web Cidadão/Gestor e Mobile App)",
+          "Painel de controle com métricas de resolução de chamados em tempo real por secretaria municipal",
+          "Conformidade com a LGPD para armazenamento seguro de dados de cidadãos",
+          "Compatibilidade total com Android e iOS"
+        ],
+        github: "https://github.com/israelalkimim/app-cidadao-intelitap"
+      },
+      nnewtractor: {
+        title: "NNewtractor Marketplace & App",
+        badge: "AgriTech & Maquinário Pesado",
+        subtitle: "Plataforma B2B & B2C para Cliente",
+        description: "Solução de marketplace desenvolvida para conectar proprietários de maquinário agrícola e industrial (tratores, escavadeiras, colheitadeiras e implementos) a compradores e locatários em todo o Brasil. Possui motor de busca refinado, cálculo de frete, categorização detalhada e pagamento digital seguro.",
+        techs: ["PHP 8.2", "Laravel 11", "TailwindCSS", "MySQL", "Mercado Pago API", "JavaScript", "Docker"],
+        highlights: [
+          "Checkout transparente com processamento instantâneo via Pix e Cartão (Mercado Pago)",
+          "Painel do anunciante com métricas de visualizações, contatos e gestão de anúncios",
+          "Otimização extrema para SEO e tempo de carregamento com imagens comprimidas dinamicamente",
+          "Deploy em servidor Linux VPS com alta disponibilidade"
+        ],
+        github: "https://github.com/israelalkimim/nnewtractor-marketplace"
+      },
+      maoamiga: {
+        title: "Plataforma Mão Amiga",
+        badge: "Marketplace de Serviços",
+        subtitle: "Projeto Pessoal / Produto Completo",
+        description: "Plataforma projetada para resolver a dor de encontrar profissionais autônomos de confiança (diaristas, eletricistas, pedreiros, mecânicos, etc.). Conta com sistema de avaliações verificadas, chat/contato direto, orçamentos estruturados e aplicativo mobile compilado em APK nativo.",
+        techs: ["Node.js", "Express", "TypeScript", "React Native (Expo)", "Vue.js", "TailwindCSS", "MySQL"],
+        highlights: [
+          "Backend moderno em TypeScript com autenticação segura JWT e validação de schema",
+          "App Mobile em React Native com testes em dispositivos Android reais (APK gerado)",
+          "Filtros de busca por categoria de serviço e distância de atendimento",
+          "Documentação técnica e modelagem de banco de dados relacional E-R completa"
+        ],
+        github: "https://github.com/israelalkimim/plataforma-mao-amiga"
+      },
+      drepadilha: {
+        title: "Drepadilha.com.br (Portal Místico)",
+        badge: "E-Commerce de Serviços",
+        subtitle: "Cliente Comercial",
+        description: "Plataforma de atendimentos e consultas online de tarologia desenvolvida para oferecer uma experiência imersiva e de alta conversão. Inclui área logada do cliente, agendamento de horários em tempo real, integração de pagamentos e painel administrativo.",
+        techs: ["Laravel 11", "PHP 8.2", "TailwindCSS", "Vite", "TypeScript", "MySQL"],
+        highlights: [
+          "Design responsivo com identidade visual sofisticada e efeitos de transição fluidos",
+          "Agendamento automático sincronizado com a agenda de atendimento do profissional",
+          "Gestão de conteúdo e relatórios de faturamento no painel administrativo",
+          "Código organizado segundo as melhores práticas do ecossistema Laravel"
+        ],
+        github: "https://github.com/israelalkimim/drepadilha-portal-mistico"
+      },
+      luzdouniverso: {
+        title: "Lar de Idosos Luz do Universo",
+        badge: "Institucional & Terceira Idade",
+        subtitle: "Cliente Comercial",
+        description: "Portal institucional desenvolvido para apresentar com empatia, clareza e autoridade as instalações, equipe médica e planos de acolhimento de uma casa de repouso e cuidados com idosos.",
+        techs: ["Laravel 11", "TailwindCSS v4", "Alpine.js", "Vite", "PHP 8.2"],
+        highlights: [
+          "Implementado com o moderno TailwindCSS v4 para performance visual de ponta",
+          "Pontuação máxima em métricas do Google Lighthouse (SEO, Acessibilidade e Performance)",
+          "Formulários inteligentes com validação e disparo imediato para equipe de atendimento",
+          "Design acessível com tipografia nítida e contrastes adequados"
+        ],
+        github: "https://github.com/israelalkimim/luz-do-universo"
+      }
+    };
+
+    function openModal(projectId) {
+      const data = modalData[projectId];
+      if (!data) return;
+
+      const content = document.getElementById('modal-content');
+      content.innerHTML = `
+        <div class="space-y-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 mb-3">
+              ${data.badge} • ${data.subtitle}
+            </div>
+            <h3 class="text-3xl font-bold text-white tracking-tight">${data.title}</h3>
+          </div>
+
+          <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+            ${data.description}
+          </p>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-3">Destaques da Engenharia & Arquitetura</h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+              ${data.highlights.map(h => `<li class="flex items-start gap-2.5"><span class="text-cyan-400 mt-0.5">✦</span><span>${h}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-mono uppercase text-gray-400 tracking-wider mb-3">Tecnologias Utilizadas</h4>
+            <div class="flex flex-wrap gap-2">
+              ${data.techs.map(t => `<span class="px-3 py-1 text-xs rounded-lg bg-white/5 border border-white/10 text-cyan-300 font-mono">${t}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex flex-wrap items-center gap-4">
+            <a href="${data.github}" target="_blank" class="px-6 py-2.5 rounded-xl text-xs font-semibold bg-cyan-500 text-black hover:bg-cyan-400 transition-all flex items-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>Acessar Código no GitHub</span>
+            </a>
+            <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl text-xs font-semibold glass-card text-gray-300 hover:text-white transition-all">
+              Fechar
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('project-modal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('project-modal').classList.add('hidden');
+    }
+
+    // Fechar modal clicando fora
+    document.getElementById('project-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
